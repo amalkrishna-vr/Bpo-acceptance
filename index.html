@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPO Solutions - Professional Business Process Outsourcing</title>
+    <meta name="description" content="Professional BPO services for streamlined business operations. Cost-effective, scalable, and secure outsourcing solutions." />
+    <meta name="author" content="BPO Solutions" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BPO Solutions - Professional Business Process Outsourcing" />
+    <meta property="og:description" content="Professional BPO services for streamlined business operations. Cost-effective, scalable, and secure outsourcing solutions." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+    /* Blues */
+    --steel-blue: hsl(207, 44%, 49%);
+    --powder-blue: hsl(210, 52%, 80%);
+    --baby-blue: hsl(199, 92%, 85%);
+    --sky-blue: hsl(197, 71%, 73%);
+    --teal-blue: hsl(187, 61%, 45%);
+
+    /* Core Theme Colors */
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(207, 44%, 20%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(207, 44%, 20%);
+    --primary: var(--steel-blue);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --secondary: var(--powder-blue);
+    --secondary-foreground: hsl(207, 44%, 20%);
+    --muted: var(--baby-blue);
+    --muted-foreground: hsl(207, 44%, 30%);
+    --accent: var(--teal-blue);
+    --accent-foreground: hsl(0, 0%, 100%);
+    --border: hsl(210, 40%, 90%);
+    --input: hsl(210, 40%, 90%);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--steel-blue) 0%, var(--teal-blue) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--sky-blue) 0%, var(--steel-blue) 50%, var(--teal-blue) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, var(--baby-blue) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsla(207, 44%, 49%, 0.1), 0 2px 4px -1px hsla(207, 44%, 49%, 0.06);
+    --shadow-elevated: 0 10px 25px -3px hsla(207, 44%, 49%, 0.1), 0 4px 6px -2px hsla(207, 44%, 49%, 0.05);
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: hsla(0, 0%, 100%, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .nav {
+            display: none;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--muted-foreground);
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        .nav-buttons {
+            display: none;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--foreground);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--muted-foreground);
+            padding: 0.5rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 4rem;
+            background: var(--gradient-hero);
+            color: var(--primary-foreground);
+        }
+
+        .hero-content {
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+            padding: 5rem 0;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-elevated);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(-0.5rem);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-header {
+            padding: 1.5rem 1.5rem 1rem;
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Form Styles */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        .form-input {
+            padding: 0.75rem;
+            border: 1px solid var(--input);
+            border-radius: 0.375rem;
+            background: var(--background);
+            font-size: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px hsla(220, 70%, 50%, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--primary-foreground);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Background variations */
+        .bg-secondary {
+            background: var(--secondary);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+
+            .nav-buttons {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .hero-features {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .form-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+
+            .grid-5 {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-accent { color: var(--accent); }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .opacity-80 { opacity: 0.8; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-4 { margin-top: 1rem; }
+        .p-4 { padding: 1rem; }
+        .rounded { border-radius: 0.5rem; }
+
+        /* Accordion Styles */
+        .accordion {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: var(--gradient-card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .accordion-trigger {
+            width: 100%;
+            padding: 1.5rem;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--muted-foreground);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .accordion-icon {
+            transition: transform 0.2s;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Testimonial specific styles */
+        .testimonial-card {
+            position: relative;
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            opacity: 0.2;
+            font-size: 2rem;
+        }
+
+        .rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        /* Process steps */
+        .process-steps {
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--gradient-primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin: 0 auto 1rem;
+        }
+
+        .process-arrow {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .process-arrow {
+                display: block;
+                position: absolute;
+                top: 1.25rem;
+                right: -1rem;
+                color: var(--primary);
+            }
+
+            .process-step:last-child .process-arrow {
+                display: none;
+            }
+        }
+
+        /* Animation for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Toast notification styles */
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">BPO Solutions</h1>
+                
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">Process</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                    <a href="#order" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <a href="#home" onclick="toggleMobileMenu()">Home</a>
+                    <a href="#about" onclick="toggleMobileMenu()">About</a>
+                    <a href="#services" onclick="toggleMobileMenu()">Services</a>
+                    <a href="#process" onclick="toggleMobileMenu()">Process</a>
+                    <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
+                    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline">Sign In</a>
+                        <a href="#order" class="btn btn-primary">Get Started</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div>
+                        <h1 class="hero-title">
+                            Streamline Your Business Operations with
+                            <span class="text-accent"> Expert BPO Services</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Focus on what matters most while we handle your business processes efficiently, 
+                            cost-effectively, and with unmatched expertise.
+                        </p>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#order" class="btn btn-lg" style="background: var(--accent); color: var(--accent-foreground);">
+                            Get Started Today →
+                        </a>
+                        <a href="#about" class="btn btn-lg btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span style="color: var(--accent);">✓</span>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span style="color: var(--accent);">✓</span>
+                            <span>Scalable Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <span style="color: var(--accent);">✓</span>
+                            <span>Expert Team</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Professional BPO team working in modern office" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-secondary">
+        <div class="container">
+            <div class="grid grid-2">
+                <div>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">About BPO Solutions</h2>
+                    <p style="font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                        We are a leading business process outsourcing company with over 15 years of experience 
+                        in delivering exceptional services to businesses worldwide. Our mission is to help 
+                        companies optimize their operations, reduce costs, and focus on their core competencies.
+                    </p>
+                    <p style="font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 2rem;">
+                        With a team of over 500 skilled professionals across multiple domains, we provide 
+                        scalable, reliable, and cost-effective solutions that drive business growth and 
+                        operational excellence.
+                    </p>
+
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Our Mission</h3>
+                    <p style="color: var(--muted-foreground); margin-bottom: 2rem;">
+                        To empower businesses by providing world-class outsourcing solutions that enhance 
+                        efficiency, reduce operational costs, and enable our clients to focus on strategic 
+                        growth initiatives.
+                    </p>
+
+                    <a href="#services" class="btn btn-primary">Learn More About Us</a>
+                </div>
+
+                <div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Modern BPO office building" class="rounded" style="width: 100%; margin-bottom: 2rem;" />
+
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <div class="card-content text-center">
+                                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">500+</div>
+                                <div style="font-size: 0.875rem; color: var(--muted-foreground);">Expert Professionals</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content text-center">
+                                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">25+</div>
+                                <div style="font-size: 0.875rem; color: var(--muted-foreground);">Countries Served</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content text-center">
+                                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">15+</div>
+                                <div style="font-size: 0.875rem; color: var(--muted-foreground);">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content text-center">
+                                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">98%</div>
+                                <div style="font-size: 0.875rem; color: var(--muted-foreground);">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our BPO Services?</h2>
+            <p class="section-subtitle">
+                We deliver exceptional value through our comprehensive approach to business process outsourcing, 
+                combining expertise, technology, and dedication to your success.
+            </p>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Cost Efficiency</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Reduce operational costs by up to 60% while maintaining high-quality service delivery through our optimized processes and competitive pricing models.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Expert Team</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Access to a pool of highly skilled professionals with domain expertise across various industries and cutting-edge technology knowledge.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Scalability</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Easily scale your operations up or down based on business needs with our flexible resource allocation and rapid deployment capabilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Data Security</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Enterprise-grade security measures, ISO compliance, and strict data protection protocols to safeguard your sensitive business information.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">24/7 Support</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Round-the-clock support and service delivery across multiple time zones to ensure continuous business operations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Quick Turnaround</h3>
+                    </div>
+                    <div class="card-content">
+                        <p style="color: var(--muted-foreground);">
+                            Rapid project deployment and fast delivery times with our streamlined processes and dedicated project management approach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Acceptance Section -->
+    <section id="order" class="section bg-secondary">
+        <div class="container">
+            <div style="max-width: 64rem; margin: 0 auto;">
+                <h2 class="section-title">Submit Your BPO Service Request</h2>
+                <p class="section-subtitle">
+                    Ready to get started? Fill out our simple form and our experts will contact you 
+                    within 24 hours to discuss your requirements and provide a customized solution.
+                </p>
+
+                <div class="card" style="box-shadow: var(--shadow-elevated);">
+                    <div class="card-header">
+                        <h3 style="font-size: 1.5rem; text-align: center;">Request a Quote</h3>
+                    </div>
+                    <div class="card-content">
+                        <form class="form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-input" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-input" placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Company Name *</label>
+                                    <input type="text" class="form-input" placeholder="Enter your company name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-input" placeholder="Enter your phone number" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Service Type *</label>
+                                    <select class="form-input form-select" required>
+                                        <option value="">Select service type</option>
+                                        <option value="data-entry">Data Entry & Processing</option>
+                                        <option value="customer-support">Customer Support</option>
+                                        <option value="finance">Finance & Accounting</option>
+                                        <option value="hr">Human Resources</option>
+                                        <option value="it">IT Services</option>
+                                        <option value="content">Content Moderation</option>
+                                        <option value="research">Research & Analytics</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Project Timeline</label>
+                                    <input type="text" class="form-input" placeholder="e.g., 2-3 months">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Estimated Budget (Optional)</label>
+                                <input type="text" class="form-input" placeholder="e.g., $10,000 - $50,000">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Project Description *</label>
+                                <textarea class="form-input form-textarea" 
+                                         placeholder="Please describe your project requirements, goals, and any specific needs..." 
+                                         required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section">
+        <div class="container">
+            <h2 class="section-title">How Our BPO Process Works</h2>
+            <p class="section-subtitle">
+                Our streamlined 5-step process ensures smooth project execution from initial 
+                consultation to final delivery, with transparency at every stage.
+            </p>
+
+            <div class="grid grid-5 process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Submit Your Request</h3>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Fill out our detailed form with your project requirements, timeline, and budget. Our team reviews every submission within 2 hours.
+                    </p>
+                    <div class="process-arrow">→</div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Requirements Analysis</h3>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Our experts analyze your needs and conduct a thorough assessment to understand your business objectives and technical requirements.
+                    </p>
+                    <div class="process-arrow">→</div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Team Assignment</h3>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        We assemble a dedicated team of specialists with the right skills and experience to handle your specific project requirements.
+                    </p>
+                    <div class="process-arrow">→</div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Process Setup</h3>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        We establish workflows, communication protocols, and quality control measures tailored to your business processes and standards.
+                    </p>
+                    <div class="process-arrow">→</div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Quality Delivery</h3>
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Your project is executed with continuous monitoring, regular updates, and rigorous quality checks to ensure exceptional results.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                    Ready to experience our streamlined process?
+                </p>
+                <a href="#order" class="btn btn-primary btn-lg">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-secondary">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say About Us</h2>
+            <p class="section-subtitle">
+                Don't just take our word for it. Hear from the businesses that have transformed 
+                their operations with our BPO services.
+            </p>
+
+            <div class="grid grid-3">
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "BPO Solutions transformed our customer support operations. Their team's expertise and dedication helped us reduce response times by 70% while improving customer satisfaction scores significantly."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">Sarah Johnson</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">CEO, TechStart Inc.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "Working with BPO Solutions for our data processing needs has been exceptional. They handle our complex requirements with precision and always deliver ahead of schedule."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">Michael Chen</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">Operations Director, Global Retail Co.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "The cost savings we achieved through their finance and accounting services allowed us to reinvest in growth initiatives. Their team feels like an extension of our own company."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">Emily Rodriguez</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">Finance Manager, InnovateCorps</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "Security was our primary concern, and BPO Solutions exceeded our expectations. Their compliance standards and data protection measures are top-notch in the industry."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">David Kumar</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">Head of IT, SecureBank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "As a growing startup, we needed scalable solutions. BPO Solutions adapted to our changing needs seamlessly, providing the flexibility we required to scale our operations."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">Lisa Thompson</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">Founder, EcoSolutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="card-content">
+                        <div class="testimonial-quote">"</div>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            "The quality of work and attention to detail from BPO Solutions is outstanding. They've become an integral part of our business operations and growth strategy."
+                        </p>
+                        
+                        <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                            <div style="font-weight: 600;">Robert Park</div>
+                            <div style="font-size: 0.875rem; color: var(--muted-foreground);">VP Operations, ManufacturingPro</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch With Us</h2>
+            <p class="section-subtitle">
+                Ready to discuss your BPO needs? Our expert team is here to help you find 
+                the perfect solution for your business requirements.
+            </p>
+
+            <div class="grid grid-2">
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">Contact Information</h3>
+                    
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <div class="card-content">
+                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <div style="width: 2.5rem; height: 2.5rem; background: var(--gradient-primary); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Office Address</h4>
+                                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                            123 Business District, Suite 400<br>
+                                            New York, NY 10001, USA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <div style="width: 2.5rem; height: 2.5rem; background: var(--gradient-primary); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Phone Number</h4>
+                                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                            +1 (555) 123-4567<br>
+                                            +1 (555) 123-4568
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <div style="width: 2.5rem; height: 2.5rem; background: var(--gradient-primary); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Email Address</h4>
+                                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                            info@bposolutions.com<br>
+                                            sales@bposolutions.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <div style="width: 2.5rem; height: 2.5rem; background: var(--gradient-primary); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12,6 12,12 16,14"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Business Hours</h4>
+                                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                            Saturday: 10:00 AM - 4:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Quick Actions</h4>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <a href="#order" class="btn btn-primary">Schedule a Consultation</a>
+                            <a href="#" class="btn btn-outline">Download Our Brochure</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card" style="box-shadow: var(--shadow-elevated);">
+                        <div class="card-header">
+                            <h3 style="font-size: 1.25rem;">Our Location</h3>
+                        </div>
+                        <div class="card-content">
+                            <div style="aspect-ratio: 16/9; background: var(--muted); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                                <div class="text-center">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); margin-bottom: 1rem;">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <p style="color: var(--muted-foreground);">Interactive map would be embedded here</p>
+                                    <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.5rem;">
+                                        123 Business District, Suite 400<br>
+                                        New York, NY 10001, USA
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div style="padding: 1rem; background: var(--secondary); border-radius: 0.5rem;">
+                                <h5 style="font-weight: 600; margin-bottom: 0.5rem;">Visit Our Office</h5>
+                                <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                                    We welcome visitors by appointment. Contact us in advance to schedule 
+                                    a meeting with our team and tour our facilities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+                Find answers to common questions about our BPO services, processes, and 
+                how we can help your business succeed.
+            </p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        What types of business processes can you outsource?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        We handle a wide range of business processes including customer support, data entry and processing, finance and accounting, human resources, IT services, content moderation, research and analytics, and many other back-office operations. Our team can customize solutions based on your specific industry and requirements.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        How do you ensure data security and confidentiality?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        We maintain enterprise-grade security measures including ISO 27001 compliance, encrypted data transmission, secure access controls, regular security audits, and comprehensive NDAs. All our employees undergo background checks and receive ongoing security training to protect your sensitive information.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        What is your typical project timeline?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        Project timelines vary based on complexity and scope. Simple data entry projects can start within 1-2 weeks, while complex process implementations may take 4-8 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the project lifecycle.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        How do you handle quality control and monitoring?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        We implement multi-level quality control processes including automated quality checks, manual reviews by supervisors, regular performance audits, and continuous improvement protocols. We also provide real-time dashboards and regular reports to keep you informed of our performance metrics.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        Can you scale services up or down based on our needs?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        Absolutely! Scalability is one of our core strengths. We can quickly adjust team sizes, extend operating hours, or modify service levels based on your changing business requirements. Our flexible model allows for both planned scaling and rapid adjustments when needed.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        What are your pricing models?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        We offer flexible pricing models including per-hour rates, per-transaction pricing, fixed monthly fees, and custom packages based on your specific needs. During our consultation, we'll recommend the most cost-effective pricing structure for your requirements and provide detailed cost breakdowns.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        Do you provide 24/7 support?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        Yes, we offer 24/7 support across multiple time zones. Our global team ensures continuous coverage for your business operations, and we provide dedicated support channels for urgent issues. We also offer flexible scheduling to match your business hours and peak periods.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                        How do you handle communication and project updates?
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        We maintain regular communication through dedicated project managers, weekly status calls, real-time collaboration tools, and comprehensive reporting dashboards. You'll have direct access to your project team and receive regular updates on progress, metrics, and any issues that arise.
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                    Still have questions? We're here to help!
+                </p>
+                <a href="#contact" class="btn btn-primary btn-lg">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BPO Solutions</h3>
+                    <p>
+                        Your trusted partner for comprehensive business process outsourcing 
+                        solutions. We help businesses streamline operations and focus on growth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C8.396 0 7.989.013 7.041.048 6.094.082 5.52.204 5.012.388a7.5 7.5 0 00-2.79 1.822 7.5 7.5 0 00-1.822 2.79c-.184.508-.306 1.082-.34 2.029C.013 7.989 0 8.396 0 12.017s.013 4.028.048 4.976c.034.947.156 1.521.34 2.029a7.5 7.5 0 001.822 2.79 7.5 7.5 0 002.79 1.822c.508.184 1.082.306 2.029.34.948.035 1.355.048 4.976.048s4.028-.013 4.976-.048c.947-.034 1.521-.156 2.029-.34a7.5 7.5 0 002.79-1.822 7.5 7.5 0 001.822-2.79c.184-.508.306-1.082.34-2.029.035-.948.048-1.355.048-4.976s-.013-4.028-.048-4.976c-.034-.947-.156-1.521-.34-2.029a7.5 7.5 0 00-1.822-2.79 7.5 7.5 0 00-2.79-1.822c-.508-.184-1.082-.306-2.029-.34C16.045.013 15.638 0 12.017 0zm0 2.16c3.563 0 3.988.013 5.396.048.303.001.507.034.709.072.178.037.304.08.437.126a2.659 2.659 0 01.972.633 2.659 2.659 0 01.633.972c.047.133.09.259.126.437.038.202.071.406.072.709.035 1.408.048 1.833.048 5.396s-.013 3.988-.048 5.396c-.001.303-.034.507-.072.709-.037.178-.08.304-.126.437a2.659 2.659 0 01-.633.972 2.659 2.659 0 01-.972.633c-.133.047-.259.09-.437.126-.202.038-.406.071-.709.072-1.408.035-1.833.048-5.396.048s-3.988-.013-5.396-.048c-.303-.001-.507-.034-.709-.072-.178-.037-.304-.08-.437-.126a2.659 2.659 0 01-.972-.633 2.659 2.659 0 01-.633-.972c-.047-.133-.09-.259-.126-.437-.038-.202-.071-.406-.072-.709-.035-1.408-.048-1.833-.048-5.396s.013-3.988.048-5.396c.001-.303.034-.507.072-.709.037-.178.08-.304.126-.437a2.659 2.659 0 01.633-.972 2.659 2.659 0 01.972-.633c.133-.047.259-.09.437-.126.202-.038.406-.071.709-.072 1.408-.035 1.833-.048 5.396-.048zM12.017 5.838a6.179 6.179 0 100 12.358 6.179 6.179 0 000-12.358zm0 10.188a4.009 4.009 0 110-8.017 4.009 4.009 0 010 8.017zm7.846-10.405a1.441 1.441 0 11-2.883 0 1.441 1.441 0 012.883 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#about">About Us</a>
+                        <a href="#services">Services</a>
+                        <a href="#process">Process</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <div class="footer-links">
+                        <span style="opacity: 0.8;">Data Entry & Processing</span>
+                        <span style="opacity: 0.8;">Customer Support</span>
+                        <span style="opacity: 0.8;">Finance & Accounting</span>
+                        <span style="opacity: 0.8;">Human Resources</span>
+                        <span style="opacity: 0.8;">IT Services</span>
+                        <span style="opacity: 0.8;">Content Moderation</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent); flex-shrink: 0; margin-top: 0.125rem;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span style="opacity: 0.8; font-size: 0.875rem;">
+                                123 Business District, Suite 400<br>
+                                New York, NY 10001, USA
+                            </span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent);">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span style="opacity: 0.8; font-size: 0.875rem;">+1 (555) 123-4567</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent);">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span style="opacity: 0.8; font-size: 0.875rem;">info@bposolutions.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid hsla(0, 0%, 100%, 0.2); margin-top: 3rem; padding-top: 2rem;">
+                <div style="max-width: 32rem; margin: 0 auto; text-align: center;">
+                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Stay Updated</h4>
+                    <p style="opacity: 0.8; margin-bottom: 1.5rem;">
+                        Subscribe to our newsletter for the latest BPO insights and updates.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 24rem; margin: 0 auto;">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            style="flex: 1; padding: 0.5rem 1rem; border-radius: 0.5rem; background: hsla(0, 0%, 100%, 0.1); border: 1px solid hsla(0, 0%, 100%, 0.2); color: white;"
+                        />
+                        <button class="btn" style="background: var(--accent); color: var(--accent-foreground);">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="opacity: 0.8; font-size: 0.875rem;">
+                    © 2024 BPO Solutions. All rights reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#" style="opacity: 0.8; font-size: 0.875rem;">Privacy Policy</a>
+                    <a href="#" style="opacity: 0.8; font-size: 0.875rem;">Terms of Service</a>
+                    <a href="#" style="opacity: 0.8; font-size: 0.875rem;">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-title">Request Submitted Successfully!</div>
+        <div class="toast-description">Our team will contact you within 24 hours to discuss your requirements.</div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Accordion functionality
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const icon = button.querySelector('.accordion-icon');
+            
+            // Close all other accordion items
+            document.querySelectorAll('.accordion-item').forEach(accordionItem => {
+                if (accordionItem !== item) {
+                    accordionItem.classList.remove('active');
+                    accordionItem.querySelector('.accordion-content').style.display = 'none';
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+
+        // Form submission with toast notification
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Reset form
+            event.target.reset();
+            
+            // Show toast
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            // Hide toast after 5 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
