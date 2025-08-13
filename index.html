@@ -304,6 +304,68 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Contact Section */
+        .contact {
+        padding: 60px 20px;
+        background-color: #0a1f1d;
+        text-align: center;
+        }
+
+        .contact h2 {
+        color: #00bcd4;
+        margin-bottom: 30px;
+        }
+
+        .contact-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 0 auto 30px auto;
+        display: block;
+        box-shadow: 0 6px 16px rgba(0, 188, 212, 0.25);
+        }
+
+        .contact form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        }
+
+        .contact input,
+        .contact textarea {
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: inherit;
+        background-color: #d1dcdc;
+        color: #0a1f1d;
+        }
+
+        .contact input::placeholder,
+        .contact textarea::placeholder {
+        color: #495757;
+        }
+
+        .contact button {
+        background-color: #00bcd4;
+        color: #0a1f1d;
+        border: none;
+        padding: 14px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        }
+
+        .contact button:hover {
+        background-color: #ffffff;
+        color: #008080;
+        }
+
         /* Grid Layouts */
         .grid {
             display: grid;
@@ -1337,6 +1399,17 @@
             </div>
         </div>
     </section>
+    <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
     <!-- FAQ Section -->
     <section class="section bg-secondary">
